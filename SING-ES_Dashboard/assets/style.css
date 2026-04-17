@@ -1,0 +1,268 @@
+/* =============================================
+   SING-ES DESIGN SYSTEM (STREAMLIT OPTIMIZED)
+   ============================================= */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* =============================================
+   VARIABLES
+   ============================================= */
+:root {
+    --primary-green: #006633;
+    --primary-red: #C1272D;
+    --bg-page: #F5F7FA;
+    --bg-card: #FFFFFF;
+    --text-dark: #1A1F36;
+    --text-secondary: #5A6476;
+    --text-muted: #8792A2;
+    --border-light: #E9ECF2;
+    --trend-up: #10B981;
+    --trend-down: #EF4444;
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --radius-card: 12px;
+}
+
+/* =============================================
+   RESET
+   ============================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, .stApp {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-page);
+}
+
+/* =============================================
+   FIX STREAMLIT LAYOUT (CRUCIAL)
+   ============================================= */
+.block-container {
+    padding-top: 1.5rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    max-width: 100% !important;
+}
+
+section.main > div {
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+.stMarkdown {
+    margin-bottom: 0 !important;
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+.main-header {
+    margin-bottom: 24px;
+}
+
+.main-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.main-header .subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* =============================================
+   KPI GRID (FIX STREAMLIT)
+   ============================================= */
+.kpi-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.kpi-card {
+    flex: 1;
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-light);
+    transition: all 0.2s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.kpi-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.kpi-value {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.kpi-trend {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.kpi-trend.up {
+    color: var(--trend-up);
+}
+
+.kpi-trend.down {
+    color: var(--trend-down);
+}
+
+/* =============================================
+   CONTENT CARDS
+   ============================================= */
+.content-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-card);
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-light);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.content-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* =============================================
+   TABLE
+   ============================================= */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.data-table th {
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--border-light);
+}
+
+.data-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.data-table tr:hover {
+    background-color: #FAFBFD;
+}
+
+.numeric {
+    text-align: right;
+}
+
+/* =============================================
+   SIDEBAR
+   ============================================= */
+section[data-testid="stSidebar"] {
+    background-color: #FFFFFF;
+    border-right: 1px solid var(--border-light);
+}
+
+.sidebar-filter-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+.stButton > button {
+    background: var(--primary-green);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 16px;
+    border: none;
+}
+
+.stButton > button:hover {
+    background: #004d26;
+}
+
+/* =============================================
+   PLOTLY FIX
+   ============================================= */
+.js-plotly-plot {
+    width: 100% !important;
+}
+
+.js-plotly-plot .plotly .main-svg {
+    background: transparent !important;
+}
+
+/* =============================================
+   ROW LAYOUT
+   ============================================= */
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+}
+
+/* =============================================
+   DIVIDER
+   ============================================= */
+.divider {
+    height: 1px;
+    background: var(--border-light);
+    margin: 20px 0;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 1200px) {
+    .kpi-grid {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .kpi-grid {
+        flex-direction: column;
+    }
+
+    .kpi-value {
+        font-size: 26px;
+    }
+}
